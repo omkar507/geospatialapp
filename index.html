@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Draw Features</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div id="map" class="map"></div>
+    <button onclick="getDates()">get Dates</button>
+    <select name="Dates" id="Dates">
+    </select>
+    <select name="Index" id="Index">
+      <option value="ndvi">NDVI</option>
+      <option value="smi">SMI</option>
+    </select>
+    <button onclick="getImages()">get Image</button>
+
+<hr>
+<label for="start">Start Date</label>
+    <input type="date" name="start" id="start">
+    <label for="end">End Date</label>
+    <input type="date" name="end" id="end">
+    <button onclick="getStats()">Get Stats</button>
+    <div style="width: 80%; height: 200px;">
+    <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="map.js"></script>
+  </body>
+</html>
